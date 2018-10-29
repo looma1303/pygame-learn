@@ -9,7 +9,7 @@ FPS = 30
 fpsClock = pygame.time.Clock()
 
 
-DISPLAYSURF = pygame.display.set_mode((400,300),0,32)
+DISPLAYSURF = pygame.display.set_mode((400,300))
 pygame.display.set_caption('Animation')
 
 WHITE = (255,255,255)
