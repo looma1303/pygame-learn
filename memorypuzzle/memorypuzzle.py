@@ -28,7 +28,7 @@ blue = (0, 0,255)
 yello = (255, 255,  0)
 orange = (255,128,0)
 purple = (255, 0, 255)
-cyan = (0.255,255)
+cyan = (0,255,255)
 
 bgcolor = navyblue
 lightbgcolor = gray
@@ -83,12 +83,11 @@ def main():
                 mousex, mousey = event.pos
                 mouseClicked = True
 
-                mouserClicked = True
                 boxx, boxy = getBoxAtPixel(mousex, mousey)
                 if boxx != None and boxy != None:
                     if not revealedBoxes[boxx][boxy]:
                         drawHighlightBoxes(boxx,boxy)
-                    if not revealedBoxes[boxx][boxy] and mouserClicked:
+                    if not revealedBoxes[boxx][boxy] and mouseClicked:
                         revealBoxesAnimation(mainBoard, [(boxx, boxy)])
                         revealedBoxes[boxx][boxy] = True
                         if firstSelection == None:
